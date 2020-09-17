@@ -14,7 +14,7 @@ body{
     left: 0;
     width: 60px;
     height: 100%;
-    background-color: #2D3039;
+    background-color: #2E3E51;
     transition: .5s;
     overflow: hidden;
 }
@@ -44,6 +44,9 @@ body{
     text-decoration: none;
     padding: 0 5px;
 }
+.navigation ul li:hover .icon{
+  color:  #fff;
+}
 .navigation ul li a .icon{
     position: relative;
   display: block;
@@ -51,7 +54,7 @@ body{
   height: 60px;
   line-height: 60px;
   text-align: center;
-  color: #fff;
+  color: #29C6CA;
 }
 .navigation ul li a .title{
 position: relative;
@@ -61,8 +64,49 @@ height: 60px;
 text-align: start;
 color: #fff;
 }
+.content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    font-size: 4rem;
+  }
+  .content p {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, #29C6CA, #29C6CA 60%, #fff 60%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    transition: background 0.2s ease-out;
+    white-space: normal;
+    text-align: center;
+  }
+  .content span {
+    position: relative;
+    z-index: -1;
+  }
+  .content span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: #E75F4B;
+    bottom: 9px;
+    transition: all 0.2s ease-out;
+  }
+  .content p:hover {
+    background-position: 0 11px;
+  }
+  .content span:hover:before {
+    transform: translateY(10px)
+  }
 .toggle{
-    background-color: #E75F4B;
     cursor: pointer;
     position: absolute;
     right: 0;
@@ -72,7 +116,7 @@ color: #fff;
     transition: .8s;
 }
 .toggle.active{
-    background-color: #29C7CA;
+    background-color: #E75F4B;
 }
 .toggle::before{
     content: "\f0c9";
