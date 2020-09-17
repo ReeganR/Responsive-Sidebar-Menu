@@ -22,6 +22,7 @@ body{
 .navigation.active
 {
     width: 300px;
+    z-index: 1;
 }
 .navigation ul{
     position: absolute;
@@ -64,19 +65,18 @@ height: 60px;
 text-align: start;
 color: #fff;
 }
-.content {
+main {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 10px;
-    font-size: 4rem;
   }
-  .content p {
+  main p {
     cursor: pointer;
     position: relative;
     display: inline-block;
+    font-size: 3.5rem;
     background: linear-gradient(to bottom, #29C6CA, #29C6CA 60%, #fff 60%, #fff 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -86,11 +86,10 @@ color: #fff;
     white-space: normal;
     text-align: center;
   }
-  .content span {
+  main span {
     position: relative;
-    z-index: -1;
   }
-  .content span:before {
+  main span:before {
     content: "";
     position: absolute;
     left: 0;
@@ -100,10 +99,10 @@ color: #fff;
     bottom: 9px;
     transition: all 0.2s ease-out;
   }
-  .content p:hover {
+  main p:hover {
     background-position: 0 11px;
   }
-  .content span:hover:before {
+  main span:hover:before {
     transform: translateY(10px)
   }
 .toggle{
@@ -139,5 +138,8 @@ color: #fff;
 @media(max-width:767px){
     .navigation{
         left: -60px;
+    }
+    main p {
+        font-size: 3rem;
     }
 }
