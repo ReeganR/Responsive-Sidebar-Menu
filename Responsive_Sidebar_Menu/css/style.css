@@ -86,25 +86,12 @@ main {
     white-space: normal;
     text-align: center;
   }
-  main span {
-    position: relative;
-  }
-  main span:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 15px;
-    background: #E75F4B;
-    bottom: 9px;
-    transition: all 0.2s ease-out;
-  }
+ 
+ 
   main p:hover {
     background-position: 0 11px;
   }
-  main span:hover:before {
-    transform: translateY(10px)
-  }
+ 
 .toggle{
     cursor: pointer;
     position: absolute;
